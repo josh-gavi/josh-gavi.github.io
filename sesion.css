@@ -1,0 +1,220 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, rgba(208, 236, 234, 0.432), rgba(165, 213, 209, 0.342)),
+                url('img/fondo.jpg');
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Registration container */
+.registration-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-left: 50px;
+}
+
+/* Decorative header */
+.registration-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0e6251;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: linear-gradient(135deg, #0e6251, #aecac8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #a5d5d1;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #0e6251;
+    outline: none;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 0.5rem;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #0e6251, #a5d5d1);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-register:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Decorative link */
+.registration-form a {
+    color: #0e6251;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.registration-form a:hover {
+    color: #0b5345;
+    text-decoration: underline;
+}
+
+/* Additional visual elements */
+.registration-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #a5d5d131, #d0ecea50);
+    z-index: -1;
+    border-radius: 15px;
+    opacity: 0.4;
+}
+
+/* Nutrilliance branding */
+.nutrilliance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 250px;
+    text-align: center;
+    color: #0e6251;
+}
+
+.nutrilliance-container .logo {
+    width: 80px;
+    height: 80px;
+    background-color: #d0ecea;
+    border: 2px solid #0e6251;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.nutrilliance-container h1 {
+    font-size: 3.0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #0e6251, #607e7b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .registration-container {
+        margin-bottom: 20px;
+        width: auto;
+    }
+
+    .nutrilliance-container {
+        margin: 0;
+    }
+
+    .nutrilliance-container .logo {
+        margin: 0 auto 10px;
+    }
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen al contenedor sin deformarla */
+    border-radius: 50%; /* Mantiene un borde redondeado si se desea */
+}
+
